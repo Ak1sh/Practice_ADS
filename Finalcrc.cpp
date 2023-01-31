@@ -39,14 +39,10 @@ cout << endl;
 // Check for input CRC code
 cout << "Enter checksum code: ";
 cin >> message;
-cout << "Enter generator: ";
-cin >> generator;
 data.resize(message.length() + generator.length() - 1);
-divisor.resize(generator.length());
+
 for (int i = 0; i < message.length(); i++)
     data[i] = message[i] - '0';
-for (int i = 0; i < generator.length(); i++)
-    divisor[i] = generator[i] - '0';
 
 // Calculation of remainder
 for (int i = 0; i < message.length(); i++) {
